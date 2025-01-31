@@ -26,13 +26,13 @@ cd NavAI-Guard
 ## Usage
 ### 1. Train the Model or use my pre-trained model provided in the repo
 ```python
-python train_model.py
+python AIS_MODEL_CODE.ipynb
 ```
 This script preprocesses the AIS dataset and trains an autoencoder to learn normal ship movement patterns.
 
 ### 2. Test the Model
 ```python
-python test_model.py
+python TEST_CODE.ipnyb
 ```
 This script loads the trained model and detects anomalies in new AIS data.
 
