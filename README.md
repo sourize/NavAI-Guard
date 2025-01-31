@@ -19,13 +19,12 @@ The AIS data used in this project includes:
 ## Installation
 Clone the repository and install dependencies:
 ```bash
-git clone https://github.com/your-username/AIS-Anomaly-Detection.git
-cd AIS-Anomaly-Detection
-pip install -r requirements.txt
+git clone https://github.com/sourize/NavAI-Guard.git
+cd NavAI-Guard
 ```
 
 ## Usage
-### 1. Train the Model
+### 1. Train the Model or use my pre-trained model provided in the repo
 ```python
 python train_model.py
 ```
@@ -36,18 +35,6 @@ This script preprocesses the AIS dataset and trains an autoencoder to learn norm
 python test_model.py
 ```
 This script loads the trained model and detects anomalies in new AIS data.
-
-## File Structure
-```
-AIS-Anomaly-Detection/
-│── data/		# Raw and preprocessed AIS datasets
-│── models/		# Saved trained models
-│── notebooks/	# Jupyter notebooks for exploration
-│── scripts/		# Training and testing scripts
-│── train_model.py	# Main training script
-│── test_model.py	# Main testing script
-│── README.md		# Project documentation
-```
 
 ## Results
 The model successfully detects anomalies based on ship movement patterns, helping in:
@@ -60,6 +47,10 @@ The model successfully detects anomalies based on ship movement patterns, helpin
 - Enhancing **model accuracy with additional AIS features**
 - Expanding the dataset for better generalization
 
+## Team Members
+- Sourish Chatterjee (Me)
+- [Kanchan Pramanik](https://www.linkedin.com/in/kanchan2003/)
+
 ## Contributing
 Feel free to fork the repository, create a new branch, and submit a pull request. Contributions are welcome!
 
@@ -67,5 +58,5 @@ Feel free to fork the repository, create a new branch, and submit a pull request
 This project is licensed under the MIT License.
 
 ## Contact
-For any queries, feel free to reach out via [LinkedIn](https://www.linkedin.com/in/your-profile) or open an issue in this repository.
+For any queries, feel free to reach out to me via [LinkedIn](https://www.linkedin.com/in/sourish-chatterjee) or [Twitter/𝕏](https://x.com/sourize_) open an issue in this repository.
 
