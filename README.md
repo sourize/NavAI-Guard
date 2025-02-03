@@ -58,5 +58,5 @@ Feel free to fork the repository, create a new branch, and submit a pull request
 This project is licensed under the MIT License.
 
 ## Contact
-For any queries, feel free to reach out to me via [LinkedIn](https://www.linkedin.com/in/sourish-chatterjee) or [Twitter/𝕏](https://x.com/sourize_) or contact my team member.
+For any queries, feel free to reach out to me via [LinkedIn](https://www.linkedin.com/in/sourish-chatterjee) or [Twitter/𝕏](https://x.com/sourize_) or contact my [team member](https://www.linkedin.com/in/kanchan2003/).
 
