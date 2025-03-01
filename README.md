@@ -3,6 +3,8 @@
 ## Overview
 This repository contains an implementation of an anomaly detection system for ships using **Automatic Identification System (AIS) data** and **autoencoders**. The project leverages deep learning to identify unusual ship movements, which can help maritime authorities enhance security and detect potential risks.
 
+_Read my Learning [here](https://sourish.xyz/blog/anomaly-detection)_
+
 ## Features
 - **Preprocessing of AIS data** for noise reduction and feature selection.
 - **Autoencoder-based anomaly detection** to identify deviations in ship movements.
