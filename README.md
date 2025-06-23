@@ -11,7 +11,7 @@
   
   *Safeguarding global waters with cutting-edge autoencoder technology*
   
-  [🔗 Live Demo](https://huggingface.co/spaces/sourize/NavAI-Guard) • [📚 Technical Deep Dive](https://sourish.xyz/blog/anomaly-detection-in-maritime-environment-using-ais-data) • [🎯 Results](#-results--impact)
+  [🔗 Live Demo](https://huggingface.co/spaces/sourize/NavAI-Guard) • [📚 Technical Deep Dive](https://sourish.xyz/thoughts/anomaly-detection-in-maritime-environment-using-ais-data) • [🎯 Results](#-results--impact)
   
 </div>
 
