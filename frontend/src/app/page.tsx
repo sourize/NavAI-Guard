@@ -31,19 +31,31 @@ export default function Home() {
 
   const handleAnalyze = async (data: any) => {
     setLoading(true);
-    setMobileInputOpen(false); // Close mobile drawer on submit
+    setMobileInputOpen(false);
+
+    // Create an AbortController for foolproof timeout
+    const controller = new AbortController();
+    const timeoutId = setTimeout(() => controller.abort(), 15000); // 15s timeout
+
     try {
       const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
-      // Timeout set to 30 seconds (30000ms) to handle Render cold starts
-      const response = await axios.post(`${apiUrl}/predict`, data, { timeout: 30000 });
+
+      const response = await axios.post(`${apiUrl}/predict`, data, {
+        signal: controller.signal
+      });
+
+      clearTimeout(timeoutId);
       setResult(response.data);
     } catch (err: any) {
       console.error(err);
-      if (err.code === 'ECONNABORTED') {
-        alert("The backend took too long to respond. It might be waking up (cold start). Please try again in a moment.");
+      if (axios.isCancel(err) || err.code === 'ECONNABORTED' || err.name === 'AbortError') {
+        alert("Request timed out (15s). The backend is likely waking up or unreachable. Please try again.");
+      } else {
+        alert("Analysis failed. Please check your connection.");
       }
     } finally {
       setLoading(false);
+      clearTimeout(timeoutId);
     }
   };
 
