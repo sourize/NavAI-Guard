@@ -1,0 +1,67 @@
+@import "tailwindcss";
+
+:root {
+  /* Defense-Grade Navy Theme - Darker Backgrounds, Higher Contrast */
+  --bg: #050b14;
+  /* Darkened from #071428 for better contrast */
+  --surface: #0a111f;
+  /* Darkened from #0f1724 */
+  --muted: #94A3B8;
+  --accent: #2DD4BF;
+  --warning: #F97316;
+  --critical: #EF4444;
+}
+
+@theme inline {
+  --color-nav-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-muted: var(--muted);
+  --color-accent: var(--accent);
+  --color-warning: var(--warning);
+  --color-critical: var(--critical);
+
+  --font-serif: "Playfair Display", serif;
+  --font-sans: var(--font-inter), system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+
+  --radius-xl: 10px;
+}
+
+body {
+  background: var(--bg);
+  color: #F8FAFC;
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* High Contrast Form Focus States */
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #475569;
+}
+
+/* Utility Utilities */
+.custom-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: #334155 transparent;
+}
