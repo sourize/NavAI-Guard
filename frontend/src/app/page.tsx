@@ -34,10 +34,14 @@ export default function Home() {
     setMobileInputOpen(false); // Close mobile drawer on submit
     try {
       const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
-      const response = await axios.post(`${apiUrl}/predict`, data);
+      // Timeout set to 30 seconds (30000ms) to handle Render cold starts
+      const response = await axios.post(`${apiUrl}/predict`, data, { timeout: 30000 });
       setResult(response.data);
-    } catch (err) {
+    } catch (err: any) {
       console.error(err);
+      if (err.code === 'ECONNABORTED') {
+        alert("The backend took too long to respond. It might be waking up (cold start). Please try again in a moment.");
+      }
     } finally {
       setLoading(false);
     }
