@@ -167,7 +167,7 @@ export function InputPanel({ onAnalyze, isLoading, onClose }: InputPanelProps) {
                 <button
                     onClick={handleSubmit}
                     disabled={isLoading}
-                    className="w-full flex items-center justify-center gap-2 h-12 md:h-10 bg-accent hover:bg-accent/90 text-nav-bg text-sm font-bold rounded shadow-[0_0_15px_-3px_var(--color-accent)] transition-all disabled:opacity-50 disabled:cursor-not-allowed uppercase tracking-wider active:scale-95"
+                    className="w-full flex items-center justify-center gap-2 h-12 md:h-10 bg-accent hover:bg-accent/90 text-nav-bg text-sm font-bold rounded shadow-[0_0_15px_-3px_var(--color-accent)] transition-all disabled:opacity-50 disabled:cursor-not-allowed uppercase tracking-wider active:scale-95 cursor-pointer"
                 >
                     {isLoading ? (
                         <span className="animate-pulse">Processing...</span>

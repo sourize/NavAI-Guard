@@ -35,7 +35,7 @@ export default function Home() {
 
     // Create an AbortController for foolproof timeout
     const controller = new AbortController();
-    const timeoutId = setTimeout(() => controller.abort(), 15000); // 15s timeout
+    const timeoutId = setTimeout(() => controller.abort(), 30000); // 30s timeout
 
     try {
       const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
@@ -49,7 +49,7 @@ export default function Home() {
     } catch (err: any) {
       console.error(err);
       if (axios.isCancel(err) || err.code === 'ECONNABORTED' || err.name === 'AbortError') {
-        alert("Request timed out (15s). The backend is likely waking up or unreachable. Please try again.");
+        alert("Request timed out (30s). The backend is likely waking up or unreachable. Please try again.");
       } else {
         alert("Analysis failed. Please check your connection.");
       }
